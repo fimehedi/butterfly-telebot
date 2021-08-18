@@ -16,11 +16,6 @@ schedule.every().tuesday.at(SCHEDULE_TIME).do(send_message, config['TUE_ROUTINE'
 schedule.every().wednesday.at(SCHEDULE_TIME).do(send_message, config['WED_ROUTINE'])
 schedule.every().thursday.at(SCHEDULE_TIME).do(send_message, config['THU_ROUTINE'])
 
-def job():
-    print("working")
-
-schedule.every(2).seconds.do(job)
-
 def main():
     while True:
         schedule.run_pending()

@@ -3,7 +3,6 @@ import requests
 import json
 
 def CodeRunner(code, language):
-    print("Running...")
     if language == 'py': language = 'python3'
     url = config['CODE_RUNNER_API']
     program = {
